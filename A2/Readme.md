@@ -1,6 +1,6 @@
 # A2 
-*by Tom Scherndl*
-*2023-05-02
+*by Tom Scherndl*  
+*2023-05-02* 
 
 * Step 1: Cloned the git repo locally  
 * Step 2: used the terminal to navigate to the correct (local) folder
