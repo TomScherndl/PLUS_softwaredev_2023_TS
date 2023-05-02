@@ -14,7 +14,7 @@
 ![pic3](images/Screenshot3.png)
 
 * Step 6: I added the module psypog because we can always use database connections in a project, right? 
-    * Step 6a: probably a mistake - having several conflicts and issues trying to install. Probably due to the fact that I am on Win11? I will abort that and start again by using the simpler environment. 
+    * Step 6a: probably a mistake - having several conflicts and issues trying to install. Probably due to the fact that I am on Win11? I will abort that and start again by doing something simpler.
 ![pic4](images/Screenshot4.png)  
 
     * Step 6b: I updated geopandas as this does not seem to create issues. conda update -n A2v1TS geopandas
