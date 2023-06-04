@@ -1,6 +1,7 @@
 ipykernel 
-
+# packages for app / html
 streamlit
+streamlit-extra
 osmnx
 folium
 numpy
