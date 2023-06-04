@@ -1,0 +1,7 @@
+ipykernel 
+
+streamlit
+osmnx
+folium
+numpy
+pandas
