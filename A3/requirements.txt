@@ -1,0 +1,6 @@
+ipykernel 
+# packages for app / html
+osmnx
+folium
+numpy
+pandas
