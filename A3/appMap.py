@@ -1,12 +1,13 @@
-#%%
+#%% import necessary modules
 import osmnx as ox
-import folium
-#from sklearn.neighbors import BallTree
+#import folium # not needed because I decided to use the osmnx function (which relies on folium though)
+from sklearn.neighbors import BallTree
 import numpy as np
 import pandas as pd
 
-#%%
-# return edge IDs that do not match passed list of hwys
+#%% Define 2 helper functions to use later
+
+# functions to get edge IDs that do not match passed list of highways (hwys)
 def find_edges(G, hwys):
     edges = []  # initialize an empty list that is filled 
      
@@ -41,22 +42,25 @@ def get_nearest(src_points, candidates, k_neighbors=1):
     # Return indices and distances
     return (closest, closest_dist)
 
+#%% Start the actual getting data and plotting
 # define overall place of data
 place = 'salzburg, austria'
 
-# define filter: use only highways (=roads) that have the following attribute/value
+# define filter: use only highways (=roads) that have the following attribute/value: 
+# highway that is primary OR secondary OR ....
 filter = '["highway"~"primary|secondary|tertiary|residential|cycleway|living street|pedestrian"]'
 
 # define the colors to use for different edge types
-hwy_colors = {'footway': 'skyblue',
+hwy_colors = {'primary': 'skyblue',
+              'secondary': 'grey',
+              'tertiary':  'green', 
               'residential': 'paleturquoise',
               'cycleway': 'orange',
               'living street': 'lightgreen',
-              'secondary': 'grey',
               'pedestrian': 'lightskyblue'}
 
-#%%
-##### plot the graph
+#%% Creating the graph
+##### make the graph object by getting the data using the given filter
 
 G = ox.graph_from_place(place, network_type='bike', 
                         custom_filter = filter)
@@ -78,6 +82,7 @@ for hwy, color in hwy_colors.items():
                                  popup_attribute = 'highway',
                                  weight = 5,
                                  color = color)
-#%%
+        
+#%% finally print the result (may take some time)
 print("Now creating the map!")
 m
