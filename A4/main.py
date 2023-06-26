@@ -3,6 +3,7 @@
 This is the main page including all elements (dashboard, map, data preparation) for the final project
 '''
 ## import relevant modules
+
 import streamlit as st
 import folium
 
