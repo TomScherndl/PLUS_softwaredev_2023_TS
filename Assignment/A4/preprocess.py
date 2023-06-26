@@ -1,4 +1,4 @@
-def getPowerStationData(file = "FinalProject\PLUS_softwaredev_2023_PowerGeneration\data\global_power_plant_database.csv"): 
+def getPowerStationData(file = "Assignment/A4/data/global_power_plant_database.csv"): 
     """Imports the Powerstation Data (csv) into a data frame and saves it into session_state!
 
     Args:
