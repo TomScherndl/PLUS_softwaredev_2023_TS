@@ -14,9 +14,13 @@ import preprocess
 ###---------------
 # preprocess / get data
 dataPS = preprocess.getPowerStationData()
-
+''''
+Here we get data and filter it based on the country: we will focus only on Australia even if many other countries are available as well.
+We then show the first 6 data points and show the overall dimensions of the resulting data frame.. 
+'''
 # show data - only prelim
-st.dataframe(dataPS)
+st.dataframe(dataPS.head(6))
+st.write(dataPS.shape)
 
 # this set-ups the sidebar
 dashboard.sidebar()
